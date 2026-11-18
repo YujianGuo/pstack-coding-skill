@@ -1,0 +1,32 @@
+{
+  "name": "pstack-coding",
+  "version": "1.0.0",
+  "description": "A pstack-inspired workflow for reliable coding: understand the existing system, make the smallest complete change, verify real behavior, and prevent proven repeat failures.",
+  "author": {
+    "name": "YujianGuo"
+  },
+  "homepage": "https://github.com/YujianGuo/pstack-coding-skill",
+  "repository": "https://github.com/YujianGuo/pstack-coding-skill",
+  "license": "MIT",
+  "keywords": [
+    "pstack",
+    "coding",
+    "workflow",
+    "verification",
+    "lint"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "pstack coding",
+    "shortDescription": "A pstack-inspired workflow for dependable code changes",
+    "longDescription": "Use for coding tasks that write or change code. Fit the change to the existing codebase, verify the requested behavior with runnable evidence, and turn recurring mistakes into enforceable checks.",
+    "developerName": "YujianGuo",
+    "category": "Developer Tools",
+    "defaultPrompt": [
+      "Use the pstack coding workflow for this change.",
+      "Review this coding change and identify a proven repeat failure that should become an enforceable check."
+    ],
+    "brandColor": "#2563EB",
+    "screenshots": []
+  }
+}
