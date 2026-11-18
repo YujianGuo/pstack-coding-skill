@@ -1,0 +1,20 @@
+{
+  "name": "pstack-coding-skill",
+  "interface": {
+    "displayName": "pstack coding"
+  },
+  "plugins": [
+    {
+      "name": "pstack-coding",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pstack-coding"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
