@@ -1,33 +1,36 @@
-# pstack-coding
+# pstack-coding-skill
 
-一个适用于 Codex 的中文编码 Skill，整理自 Lauren Tan 的公开 pstack 工作流。
+一个面向 Codex 的 pstack 风格编码工作流，支持作为 Codex 插件安装，也保留独立 Skill 文件供手动安装。
 
-## 安装
+这是基于公开 Cursor pstack 资料整理的 Codex 适配版，仅打包一个编码 Skill；不包含完整 Cursor 插件，也不代表 Cursor 或 Lauren Tan。
 
-将本仓库克隆到 Codex 用户级 skills 目录：
+## 作为 Codex 插件安装
 
-```powershell
-git clone https://github.com/YujianGuo/pstack-coding-skill.git "$HOME/.codex/skills/pstack-coding"
-```
+在终端添加插件市场：
 
-要让 Skill 在每次编码任务中默认加载，可在 `~/.codex/AGENTS.md` 中加入：
+    codex plugin marketplace add YujianGuo/pstack-coding-skill
 
-```markdown
-## Default coding workflow
+然后在 Codex 中打开插件浏览器（/plugins），选择 pstack coding 市场并安装 pstack-coding。安装后新开一个对话。
 
-For each task that writes or changes code, including fixes, refactors, tests, and scripts, load and follow the `pstack-coding` skill before implementing. If it is absent from the skills list, read `~/.codex/skills/pstack-coding/SKILL.md` directly. Use it alongside applicable project-specific skills and the user's current instructions.
-```
+## 手动安装为 Skill
+
+将根目录的 SKILL.md 放到：
+
+    ~/.codex/skills/pstack-coding/SKILL.md
+
+想在每个编码任务中明确强制使用，可在 ~/.codex/AGENTS.md 中加入：
+
+    ## Default coding workflow
+    For each task that writes or changes code, including fixes, refactors, tests, and scripts, load and follow the pstack-coding skill before implementing. If it is absent from the skills list, read ~/.codex/skills/pstack-coding/SKILL.md directly. Use it alongside applicable project-specific skills and the user's current instructions.
 
 ## 工作流
 
-- 先明确验收条件，再按仓库现有设计完成最小完整改动。
+- 先明确验收条件，再按现有代码结构完成最小完整改动。
 - 通过真实入口和可复查证据验证行为。
 - 将有证据表明会重复的问题转为架构约束、类型、lint、CI 或回归测试。
 
-完整指引见 [`SKILL.md`](SKILL.md)。
+插件目录中的 skills/pstack-coding/SKILL.md 是插件打包版本；根目录的 SKILL.md 适合手动安装。
 
 ## 来源与许可
 
-本 Skill 根据 [Cursor pstack](https://github.com/cursor/plugins/tree/main/pstack) 的公开资料整理，尤其参考其 `correct` Skill 和验证指南。此仓库提供独立的 Codex Skill，不包含 Cursor 官方插件代码，也不代表 Cursor 或 Lauren Tan。
-
-本仓库按 MIT License 发布，并保留上游 pstack 的原始版权声明。详见 [`LICENSE`](LICENSE)。
+本项目根据 [Cursor pstack](https://github.com/cursor/plugins/tree/main/pstack) 的公开资料整理，重点参考 correct Skill 与验证指南。MIT 许可保留上游版权声明，详见 LICENSE。
